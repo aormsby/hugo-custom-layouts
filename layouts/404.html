@@ -2,9 +2,9 @@
 <article class="post-single">
     <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
     <div class="post-content">
-        <p>{{ "Hmm... Sorry, this page is missing." | markdownify }}
+        <p>{{ .Site.Params.page404.Message | markdownify }}
         {{ if .Site.Taxonomies.tags }}
-        {{ "Maybe these tags will help you find your way. :slightly_smiling_face:" | markdownify | emojify }}</p>
+        {{ .Site.Params.page404.TagsMessage | markdownify | emojify }}</p>
         <h2>Tags</h2>
         <div>
             <ul>
